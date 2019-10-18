@@ -12,7 +12,8 @@
 <style>
     body {
         height: 100vh;
-        background-color: #bbe3d5;
+        padding-top: 150px;
+        background-color: rgb(253, 189, 51);
     }
     #content-box {
         margin: 0 auto;
@@ -27,6 +28,8 @@
         line-height: 50px;
         text-align: center;
     }
+		
+
 </style>
 <script type="text/javascript">
 	function btnLogin() {
@@ -41,7 +44,7 @@
 </head>
 <body>
 	<div style="text-align: center; margin-bottom: 50px;">
-	<h5>Delivery Chicken by Drone!</h5>
+	<img id="mainimage" src="<%=application.getContextPath()%>/resources/images/chicken.PNG" width="320"/>
 	</div>
     <div id="content-box">
 	<c:if test="${loginResult != 'success'}">
@@ -60,7 +63,7 @@
 				<span style="color:red;font-weight: 700;">Incorrect password.</span>
 				</c:if>
 			</div>
-			<input type="submit" onclick="btnLogout()" class="btn btn-primary" value="Log in"/>
+			<input type="submit" onclick="btnLogout()" class="btn btn-danger" value="Log in"/>
 		</form>
 	</c:if>
 	<c:if test="${loginResult == 'success'}">
