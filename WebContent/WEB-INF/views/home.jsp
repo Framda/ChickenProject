@@ -34,6 +34,9 @@
 		if($("#mpassword").val() == "") return false;
 		return true;
 	}
+	function btnLogout() {
+		location.href = "logout";
+	}
 </script>
 </head>
 <body>
